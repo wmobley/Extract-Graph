@@ -30,16 +30,32 @@
     "parameterSet": {
       "appArgs": [
         {
-          "name": "Greeting",
-          "description": "Choose a greeting to give to your target",
+          "name": "Text Name",
+          "description": "Whats the name of the text you will be using?",
           "inputMode": "REQUIRED",
-          "arg": "hello"
+          "arg": "Article"
         },
         {
-          "name": "Target",
-          "description": "Whom to address your greeting",
+          "name": "Work folder",
+          "description": "Where is the file located",
           "inputMode": "REQUIRED",
-          "arg": "world"
+          "arg": "$work"
+        },
+        {
+          "name": "Database URI",
+          "description": "Wheres the database to save the file",
+          "inputMode": "REQUIRED",
+          "arg": "$work"
+        },{
+          "name": "Database Username",
+          "description": "Whats the Database Username",
+          "inputMode": "REQUIRED",
+          "arg": "$work"
+        },{
+          "name": "Database Password",
+          "description": "Whats the Database Password",
+          "inputMode": "REQUIRED",
+          "arg": "$work"
         }
       ],
       "containerArgs": [

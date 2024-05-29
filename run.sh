@@ -1,9 +1,12 @@
 #!/bin/bash
 
-Greeting=$1
-Target=$2
+text_name=$1
+workfolder=$2
+url=$3
+user=$4
+password=$5
 
-FULL_GREETING="${Greeting} ${Target}. My name is ${_tapisJobOwner}"
-echo "$FULL_GREETING"
 
-echo $FULL_GREETING > $_tapisExecSystemOutputDir/out.txt
+conda activate llm
+
+python create-knowledge-graph $text_name $workfolder $url $user $password
