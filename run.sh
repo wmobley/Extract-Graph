@@ -8,5 +8,5 @@ password=$5
 
 
 conda activate llm
-
+pip install --no-cache-dir -r requirements.txt
 python create-knowledge-graph $text_name $workfolder $url $user $password
