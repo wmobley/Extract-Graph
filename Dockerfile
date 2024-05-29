@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 USER mambauser
 
-COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yaml /tmp/env.yaml
+COPY --chown=$MAMBA_USER:$MAMBA_USER env.yaml /tmp/env.yaml
 COPY --chown=$MAMBA_USER:$MAMBA_USER requirements.txt /tmp/requirements.txt
 RUN micromamba install -y -n llm -f /tmp/env.yaml && \
     micromamba clean --all --yes
