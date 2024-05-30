@@ -1,4 +1,5 @@
-FROM mambaorg/micromamba:git-8e479d6-focal-cuda-12.3.1
+FROM nvidia/cuda:12.3.2-runtime-ubi8
+
 
 
 USER root
