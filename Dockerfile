@@ -59,8 +59,8 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
 RUN useradd --no-log-init --create-home --shell /bin/bash --uid "${NB_UID}" --gid "${NB_GID}" "${NB_USER}"
 
 
-COPY  create-Knowledge-graph.py $SCRATCH/create-Knowledge-graph.py
-
+COPY  create-Knowledge-graph.py create-Knowledge-graph.py
+RUN pwd
 COPY run.sh /tapis/run.sh
 
 RUN chmod +x /tapis/run.sh
