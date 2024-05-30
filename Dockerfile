@@ -58,11 +58,11 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
 # Create NB_USER with UID=NB_UID and GID=NB_GID
 RUN useradd --no-log-init --create-home --shell /bin/bash --uid "${NB_UID}" --gid "${NB_GID}" "${NB_USER}"
 
-COPY run.sh /tapis/run.sh
+COPY run.sh run.sh
 
 COPY  create-Knowledge-graph.py create-Knowledge-graph.py
 
-RUN chmod +x /tapis/run.sh
+RUN chmod +x run.sh
 
 USER ${NB_UID}
 
