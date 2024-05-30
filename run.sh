@@ -10,10 +10,10 @@ if [ "$1" != "true" ] && [ "$1" != "false" ]; then
 	echo "The first parameter must be a boolean value to recreate the environment"
 	exit 1
 fi
-if [ "$#" -ne 9 ]; then
-	echo "Illegal number of parameters"
-	exit 1
-fi
+# if [ "$#" -ne 9 ]; then
+# 	echo "Illegal number of parameters"
+# 	exit 1
+# fi
 
 function install_conda() {
 	echo "Checking if miniconda3 is installed..."
@@ -303,4 +303,4 @@ handle_installation
 
 start_ollama
 
-python ./code/create-knowledge-graph.py $text_name $workfolder $url $user $password
+python /code/create-knowledge-graph.py $text_name $workfolder $url $user $password

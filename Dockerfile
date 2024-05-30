@@ -67,8 +67,4 @@ RUN chmod +x /tapis/run.sh
 
 USER ${NB_UID}
 
-# Setup work directory
-RUN mkdir "${NB_HOME}/work"
-
-
 ENTRYPOINT [ "/tapis/run.sh" ]
