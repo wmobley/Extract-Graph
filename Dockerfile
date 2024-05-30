@@ -3,7 +3,6 @@ FROM nvidia/cuda:12.3.2-runtime-ubi8
 
 
 USER root
-RUN apt-get update && apt-get install -y 
     
 USER mambauser
 
