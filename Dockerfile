@@ -9,8 +9,7 @@ USER mambauser
 
 COPY --chown=$MAMBA_USER:$MAMBA_USER env.yaml /tmp/env.yaml
 COPY --chown=$MAMBA_USER:$MAMBA_USER requirements.txt /tmp/requirements.txt
-RUN micromamba install -y -n llm -f /tmp/env.yaml && \
-    micromamba clean --all --yes
+RUN micromamba install -y -n llm -f /tmp/env.yaml 
 COPY --chmod=755 run.sh /tapis/run.sh
 
 COPY --chown=$MAMBA_USER:$MAMBA_USER create-Knowledge-graph.py create-Knowledge-graph.py
