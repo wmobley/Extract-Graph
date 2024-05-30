@@ -58,11 +58,12 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
 # Create NB_USER with UID=NB_UID and GID=NB_GID
 RUN useradd --no-log-init --create-home --shell /bin/bash --uid "${NB_UID}" --gid "${NB_GID}" "${NB_USER}"
 
-COPY run.sh run.sh
 
-COPY  create-Knowledge-graph.py create-Knowledge-graph.py
+COPY  ./create-Knowledge-graph.py ./code/create-Knowledge-graph.py
 
-RUN chmod +x run.sh
+COPY run.sh /tapis/run.sh
+
+RUN chmod +x /tapis/run.sh
 
 USER ${NB_UID}
 
@@ -71,7 +72,4 @@ RUN mkdir "${NB_HOME}/work"
 
 WORKDIR "${NB_HOME}"
 
-
-ENV PATH="/opt/conda/bin:${PATH}"
-ENV PATH "/code:$PATH"
-ENTRYPOINT [ "run.sh" ]
+ENTRYPOINT [ "/tapis/run.sh" ]
