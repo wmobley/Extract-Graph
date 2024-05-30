@@ -1,7 +1,6 @@
 #!/bin/bash
-#!/bin/bash
 
-
+echo "Your command line args (appArgs) are: $@"
 
 set -xe
 start_time=$(date +%s)
@@ -303,4 +302,4 @@ handle_installation
 
 start_ollama
 
-python create-knowledge-graph.py $text_name $workfolder $url $user $password
+python $SCRATCH/sites-and-stories-nlp/create-knowledge-graph.py $text_name $workfolder $url $user $password
