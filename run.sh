@@ -3,7 +3,7 @@
 echo "Your command line args (appArgs) are: $@"
 echo "checking access"
 
-ls $SCRATCH/sites-and-stories-nlp/
+ls -l $SCRATCH/sites-and-stories-nlp/create-knowledge-graph.py
 echo "done"
 
 
