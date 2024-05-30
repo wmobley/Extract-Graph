@@ -4,6 +4,7 @@ echo "Your command line args (appArgs) are: $@"
 echo "checking access"
 
 ls -l $SCRATCH/sites-and-stories-nlp/create-Knowledge-graph.py
+nvidia-smi
 echo "done"
 
 
