@@ -3,7 +3,7 @@
 echo "Your command line args (appArgs) are: $@"
 echo "checking access"
 
-ls -l $SCRATCH/sites-and-stories-nlp/create-knowledge-graph.py
+ls -l $SCRATCH/sites-and-stories-nlp/create-Knowledge-graph.py
 echo "done"
 
 
@@ -306,4 +306,5 @@ get_tap_token
 handle_installation
 
 start_ollama
-python $SCRATCH/sites-and-stories-nlp/create-knowledge-graph.py $text_name $workfolder $url $user $password
+conda activate llm
+python $SCRATCH/sites-and-stories-nlp/create-Knowledge-graph.py $text_name $workfolder $url $user $password
