@@ -303,4 +303,4 @@ handle_installation
 
 start_ollama
 
-python /code/create-knowledge-graph.py $text_name $workfolder $url $user $password
+python create-knowledge-graph.py $text_name $workfolder $url $user $password
