@@ -295,6 +295,7 @@ export workfolder=$6
 export url=$7
 export user=$8
 export password=$9
+
 #Execution
 install_conda
 load_cuda
@@ -307,4 +308,4 @@ handle_installation
 
 start_ollama
 conda activate llm
-python $SCRATCH/sites-and-stories-nlp/create-Knowledge-graph.py $text_name $workfolder $url $user $password
+python $SCRATCH/sites-and-stories-nlp/create-knowledge-graph.py $text_name $workfolder $url $user $password
