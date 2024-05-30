@@ -62,7 +62,7 @@ RUN useradd --no-log-init --create-home --shell /bin/bash --uid "${NB_UID}" --gi
 COPY  create-Knowledge-graph.py create-Knowledge-graph.py
 
 COPY run.sh /tapis/run.sh
-
+RUN pwd
 RUN chmod +x /tapis/run.sh
 
 USER ${NB_UID}
