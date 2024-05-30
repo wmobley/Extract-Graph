@@ -1,13 +1,13 @@
 {
   "id": "extract-graph-",
-  "version": "0.1.4.sha-15a1426",
+  "version": "0.1.4.sha-e7e76c7",
   "description": "Run an non-interactive script on TACC using docker.",
   "owner": "${apiUserId}",
   "enabled": true,
   "runtime": "SINGULARITY",
   "runtimeVersion": null,
   "runtimeOptions": ["SINGULARITY_RUN"],
-  "containerImage": "docker://ghcr.io/wmobley/extract-graph:sha-15a1426",
+  "containerImage": "docker://ghcr.io/wmobley/extract-graph:sha-e7e76c7",
   "jobType": "BATCH",
   "maxJobs": -1,
   "maxJobsPerUser": -1,
@@ -94,7 +94,7 @@
           "name": "Text Name",
           "description": "Whats the name of the text you will be using?",
           "inputMode": "REQUIRED",
-          "arg": "Kwakkel et al_2016_Comparing Robust Decision-Making and Dynamic Adaptive Policy Pathways for"
+          "arg": "Kwakkel_et_al_2016_Comparing_Robust_Decision-Making_and_Dynamic_Adaptive_Policy_Pathways_for"
         },
         {
           "name": "Work folder",

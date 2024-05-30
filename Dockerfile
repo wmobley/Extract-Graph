@@ -59,7 +59,7 @@ RUN sed -i 's/^#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashr
 RUN useradd --no-log-init --create-home --shell /bin/bash --uid "${NB_UID}" --gid "${NB_GID}" "${NB_USER}"
 
 
-COPY  ./create-Knowledge-graph.py ./code/create-Knowledge-graph.py
+COPY  create-Knowledge-graph.py create-Knowledge-graph.py
 
 COPY run.sh /tapis/run.sh
 
@@ -70,6 +70,5 @@ USER ${NB_UID}
 # Setup work directory
 RUN mkdir "${NB_HOME}/work"
 
-WORKDIR "${NB_HOME}"
 
 ENTRYPOINT [ "/tapis/run.sh" ]
