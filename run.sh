@@ -2,8 +2,8 @@
 
 echo "Your command line args (appArgs) are: $@"
 echo "checking access"
-pwd
-ls $SCRATCH
+
+ls $SCRATCH/sites-and-stories-nlp/
 echo "done"
 
 
