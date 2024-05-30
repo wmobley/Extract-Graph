@@ -1,6 +1,11 @@
 #!/bin/bash
 
 echo "Your command line args (appArgs) are: $@"
+echo "checking access"
+pwd
+ls $SCRATCH
+echo "done"
+
 
 set -xe
 start_time=$(date +%s)
@@ -301,5 +306,4 @@ get_tap_token
 handle_installation
 
 start_ollama
-
 python $SCRATCH/sites-and-stories-nlp/create-knowledge-graph.py $text_name $workfolder $url $user $password
